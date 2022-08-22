@@ -1,15 +1,14 @@
-from pathlib import Path
-from knit.utils import extract_sexp, extract_packages
+from knit.utils import extract_packages, extract_sexp
 
 
 def test_extract_sexp():
-    sample = "(package! doom-themes)"
-    assert extract_sexp(sample, 0) == "(package! doom-themes)"
+    sample = '(package! doom-themes)'
+    assert extract_sexp(sample, 0) == '(package! doom-themes)'
 
-    sample = "(package! doom-themes (package! doom-themes-ext-themes))"
+    sample = '(package! doom-themes (package! doom-themes-ext-themes))'
     assert (
         extract_sexp(sample, 0)
-        == "(package! doom-themes (package! doom-themes-ext-themes))"
+        == '(package! doom-themes (package! doom-themes-ext-themes))'
     )
 
 
@@ -21,7 +20,7 @@ def test_extract_packages():
     """
 
     assert extract_packages(sample) == [
-        "(package! doom-themes)",
-        "(package! doom-modeline)",
-        "(package! all-the-icons)",
+        '(package! doom-themes)',
+        '(package! doom-modeline)',
+        '(package! all-the-icons)',
     ]
