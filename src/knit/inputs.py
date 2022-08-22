@@ -119,9 +119,9 @@ class Inputs:
                 f' expectation ({len(self.arg_def)}).'
             )
         parsed_args = {}
-        args = list(args)
+        params = [*args]
         for arg_name, caster in self.arg_def.items():
-            arg = args.pop(0)
+            arg = params.pop(0)
             try:
                 parsed_args[arg_name] = caster(arg)
             except ValueError as err:
