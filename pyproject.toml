@@ -9,9 +9,9 @@ license = "GPLv3"
 python = "^3.9"
 
 [tool.poetry.dev-dependencies]
-mypy = "^0.961"
+mypy = "^0.971"
 pytest = "^7.1.2"
-flake8 = "^4.0.1"
+flake8 = "^5.0.4"
 tox = "^3.25.0"
 pre-commit = "^2.19.0"
 isort = "^5.10.1"
