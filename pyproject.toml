@@ -16,7 +16,7 @@ tox = "^3.26.0"
 pre-commit = "^2.19.0"
 isort = "^5.10.1"
 hypothesis = "^6.54.5"
-pytest-cov = "^3.0.0"
+pytest-cov = "^4.0.0"
 codecov = "^2.1.12"
 black = {version = "^22.6.0", allow-prereleases = true}
 bandit = "^1.7.4"
